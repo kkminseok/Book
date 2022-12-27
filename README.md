@@ -9,3 +9,30 @@
 대부분 깃허브블로그에 적혀있는 내용이고, 이 내용은 블로그에도 추가해나갈 예정.
 
 
+## DevelopmentPhilosophy
+
+- CleanArchitecture
+- CleanCode
+- 실용주의 프로그래머(정리 필요)
+
+-----
+
+## Java
+
+-----
+
+## SystemDesign
+
+- 가상 면접 사례로 배우는 대규모 시스템 설계 기초(ing..)
+
+-----
+
+## network
+
+- IT엔지니어를 위한 네트워크 입문(ing..)
+
+-----
+
+## OS
+
+- Code(정리 필요)
