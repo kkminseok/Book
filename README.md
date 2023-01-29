@@ -13,7 +13,9 @@
 - CleanArchitecture
 - CleanCode
 - 실용주의 프로그래머(정리 필요)
-- 객체지향의 사실과 오해
+- 객체지향의 사실과 오해  
+<img src="https://user-images.githubusercontent.com/30401054/215334944-84973cb3-c69d-48ed-8966-8564f672362b.jpg" height="100px" width="300px">
+
 
 -----
 
