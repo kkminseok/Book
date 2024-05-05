@@ -80,10 +80,28 @@ docker rm $(docker ps -a -q)
 # 컨테이너 포트바인딩 확인
 docker port [컨테이너 명]
 
+# 컨테이너 볼륨 마운트
+docker run ~ -v [호스트 디렉터리]:[컨테이너 디렉터리]
+
+# 컨테이너끼리 볼륨 마운트
+docker run ~ --volumes-from [컨테이너 명]
+
+# 컨테이너 정보
+docker container inspect [컨테이너명]
 ```
 
+### 도커 볼륨
 
+```sh
+# 도커 볼륨 생성
+docker volume create [--name 볼륨명] 
 
+# 도커 볼륨 연결
+docker run ~ -v [볼륨의 이름]:[컨테이너 디렉터리 경로]
 
+# 도커 볼륨 정보 확인
+docker inspect --type volume [볼륨명]
 
-
+# 사용하지 않은 도커볼륨 삭제
+docker volume prune
+```
