@@ -105,3 +105,26 @@ docker inspect --type volume [볼륨명]
 # 사용하지 않은 도커볼륨 삭제
 docker volume prune
 ```
+
+### 도커 네트워크
+
+```sh
+# 도커 네트워크 목록
+docker network ls
+
+# 도커 브리지 생성
+docker network create --driver bridge 브리지명
+
+# 도커 호스트 네트워크 설정
+docker run ~ --net host [또는] none ~
+
+# 도커 컨테이너 네트워크 설정
+docker run ~ --net container:[컨테이너명]
+
+# 도커 브리지 네트워크 별칭 설정
+docker run ~ --net [브리지네트워크명] --net-alias [별칭]
+
+#도커 브리지 해제
+docker network disconnect [브리지명] [컨테이너명]
+docker network connect [브리지명] [컨테이너명]
+```
