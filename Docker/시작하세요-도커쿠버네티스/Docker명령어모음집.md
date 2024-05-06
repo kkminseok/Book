@@ -88,6 +88,24 @@ docker run ~ --volumes-from [컨테이너 명]
 
 # 컨테이너 정보
 docker container inspect [컨테이너명]
+
+# 컨테이너 자원 할당 변경
+docker update [변경할 자원 제한] [컨테이너명]
+
+# 컨테이너 메모리 제한
+docker run ~ --memory="1g"  - 단위 m, g
+|--memory-swap="1g"|: swap 메모리 설정
+
+# 컨테이너 cpu 제한
+docker run ~ --cpu-shares 1024 (비중설정)
+
+# 컨테이너 특정 cpu 사용하도록 제한
+docker run ~ --cpuset-cpus=2 (3번째 사용하도록)
+|--cpuset-cpus="0,3"| (1,4 번째 사용)
+|--cpuset-cpus="0-2"| (1,2,3번째 사용)
+
+# 컨테이너 I/O 제한
+docker run ~ --device-write-bps [디바이스이름]:[값](1mb) ~ -> 초당 쓰기작업 1mb제한
 ```
 
 ### 도커 볼륨
@@ -128,3 +146,19 @@ docker run ~ --net [브리지네트워크명] --net-alias [별칭]
 docker network disconnect [브리지명] [컨테이너명]
 docker network connect [브리지명] [컨테이너명]
 ```
+
+### 도커 로깅
+
+```sh
+# 도커 컨테이너 로그 확인
+docker logs [컨테이너명]
+|--tail [N]|: 마지막 n번째줄까지 출력
+|--since [timestamp]|: timestamp이후의 로그 출력
+|-f|: 실시간 로그 출력
+
+# 도커 로그 상세 설정
+docker run ~ --log-opt max-size=10k 
+docker run ~ --log-opt max-file=3
+..
+```
+
