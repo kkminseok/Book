@@ -162,3 +162,25 @@ docker run ~ --log-opt max-file=3
 ..
 ```
 
+### 도커 이미지
+
+```sh
+# 도커 이미지 검색
+docker search [이미지명]
+
+# 도커 이미지 생성
+docker commit [Option] 컨테이너명 [저장소:태그명]
+
+# 도커 커밋 히스토리
+docker history [이미지:태그명]
+
+# 도커 이미지, 추출 및 불러오기
+docker save -o [추출할 파일명] [이미지명]
+docker load [추출된 파일명]
+
+docker export -o [추출할 파일명] [이미지명]
+docker import [추출된 파일명] [만들 이미지명:태그]
+
+# 도커 이미지 이름 추가
+docker tag [기존 이미지명] [새롭게 생성될 이미지명]
+```
