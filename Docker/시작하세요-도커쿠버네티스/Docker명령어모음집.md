@@ -25,10 +25,13 @@ exit
 (command) Ctrl +P, Q
 ```
 
-### 도커 이미지 목록
+### 도커 이미지 
 
 ```sh
+# docker 이미지 목록
 docker images
+|--filter| => 이미지 필터 검색
+
 ```
 
 ### 도커 컨테이너 관련
