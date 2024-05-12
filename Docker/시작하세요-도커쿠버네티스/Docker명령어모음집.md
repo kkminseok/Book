@@ -2,10 +2,19 @@
 
 ##  1. 도커 기본
 
+```sh
+# 도커데몬 실행, 중지
+service docker start || dockerd(포그라운드)
+service docker stop
+```
+
 ### 도커 정보
 
 ```sh
 docker info
+
+### 도커 명령어 위치
+which docker
 ```
 
 ## 2. 도커 엔진
