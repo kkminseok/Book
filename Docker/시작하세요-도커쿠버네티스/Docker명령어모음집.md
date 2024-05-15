@@ -215,3 +215,30 @@ docker stats
 docker system df
 
 ```
+
+### 도커 스웜
+
+```sh
+//스웜 클러스터 정보 확인
+docker info | grep Swarm
+
+//스웜 매니저 생성
+docker swarm init --adverties-addr [pulbicIP]
+//토큰 값 확인
+docker swarm join-token manager
+//토큰 값 갱신
+docker swarm join-token --rotate manager
+
+//워커 노드 추가
+docker swarm join \ --token [매니저 토큰] [매니저ip:port]
+//워커 노드 삭제 (해당 노드에서)
+docker swarm leave
+=> 매니저 노드는 --force를 붙여야함.
+//워커 노드 삭제 (매니저 노드에서)
+docker node rm [워커 노드명]
+//워커 노드 매니저 노드로 변경(매니저 노드에서)
+docker node promote [워커 노드명]
+//매니저 노드 워커노드로 변경
+docker node demote [매니저 노드명]
+
+```
