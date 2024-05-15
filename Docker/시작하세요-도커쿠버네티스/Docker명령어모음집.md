@@ -54,6 +54,7 @@ docker run ~
 |-d|: Detached모드로 컨테이너 실행  - 백그라운드
 |-e|: 환경변수 설정
 |--link|: A컨테이너에서 B컨테이너로 접근할 수 있도록 지칭(Legacy)
+|--storage-opt|: 컨테이너 저장공간의 크기 제한
 
 # 컨테이너 생성
 docker create ~
@@ -195,4 +196,22 @@ docker import [추출된 파일명] [만들 이미지명:태그]
 
 # 도커 이미지 이름 추가
 docker tag [기존 이미지명] [새롭게 생성될 이미지명]
+```
+
+### 도커 데몬 디버그
+
+```sh
+dockerd -D
+//서비스인 경우
+jounralctl -u docker || /var/log/upstart/docker.log
+//실시간 로그 스트림
+docker events
+docker system events
+|--filter| : 출력 종류 지정
+//실행중 컨테이너 자원 사용량 스트림 출력
+docker stats
+|--no-stream| : 스트림 아닌 한 번만 출력
+//도커에서 사용하고 있는 이미지, 컨테이너, 로컬 볼륭 등을 삭제할때 확보할 수 있는 공간 출력
+docker system df
+
 ```
