@@ -241,4 +241,38 @@ docker node promote [워커 노드명]
 //매니저 노드 워커노드로 변경
 docker node demote [매니저 노드명]
 
+//서비스 생성
+docker service create ~
+|--mode global|: global모드 서비스 생성
+|--constraint 'node.labels.[라벨명] = [값]'| : 노드 라벨로 서비스 제약 설정
+|--constraint 'node.id.[노드ID] = [값]'| : 노드 ID로 서비스 제약 설정
+
+//서비스목록
+docker service ls
+//서비스 상세 정보 확인
+docker service ps [서비스 이름]
+//서비스 삭제
+docker service rm [서비스 이름]
+//서비스 레플리카 셋의 수 조정
+docker service scale [서비스 이름]=[갯수]
+//서비스 이미지 업데이트
+docker service update --image [이미지 명] [서비스이름]
+//서비스 설정 확인
+docker service inspect --pretty [서비스 명]
+
+//서비스 secret 생성
+docker echo [시크릿 value] | secret create [시크릿 key]
+//서비스 secret 목록
+docker secret ls
+
+//서비스 config 생성
+docker config create [config 명] [파일명]
+
+//노드 상태 변경
+docker node update --availability [상태명] [노드 명]
+
+//노드 라벨 추가
+docker node update --label-add [key]=[value] [노드 명]
+
 ```
+
