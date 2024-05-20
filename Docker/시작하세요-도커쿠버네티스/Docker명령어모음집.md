@@ -275,4 +275,39 @@ docker node update --availability [상태명] [노드 명]
 docker node update --label-add [key]=[value] [노드 명]
 
 ```
+## 도커 컴포즈
+
+```sh
+//도커 컴포즈 버전 확인
+docker-compose -v
+
+//도커 서비스 내 컨테이너 수 조절
+docker-compose scale [컨테이너 명]=[갯수]
+
+//도커 컴포즈 내 프로젝트 제거
+docker-compose down
+|-p [프로젝트 명]| : 지정하여 제거
+
+//도커 컴포즈 컨테이너 생성
+docke-compose up
+|-d|: background 실행
+|-f|: docker-compose.yml파일경로 지정
+|-p|: 프로젝트명 지정
+
+//yaml파일 검증
+docker-compose config
+```
+
+## 도커 스택
+
+```sh
+//도커 스택 생성
+docker stack deploy [스택명]
+|-c|: docker-compose.yml파일 지정
+//도커 스택 삭제
+docker stack rm [스택명]
+```
+
+
+
 
