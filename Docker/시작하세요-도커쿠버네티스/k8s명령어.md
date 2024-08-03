@@ -1,12 +1,3 @@
-### minikube
-
-```sh
-# 포트포워딩
-minikube service <서비스명>
-```
-
-### 공통
-
 ```sh
 #오브젝트 종류 확인
 kubectl api-resources
@@ -47,7 +38,6 @@ kubectl get rs
 
 # 레플리카셋 삭제
 kubectl delete rs <오브젝트 이름>
-
 ```
 
 ### 디플로이먼트
@@ -88,5 +78,18 @@ kubectl delete -f ~.yaml
 --service-node-port-range=30000-35000
 ```
 
+### 네임스페이스
+```sh
+# 네임스페이스 목록 가져오기
+kubectl get namespaces
+kubectl get ns
 
+# 네임스페이스 생성
+kubectl create namespace <namespace 이름>
 
+# 모든 네임스페이스 리소스 확인
+kubectl get pods --all-namespaces
+
+# 네임스페이스 삭제
+kubectl delete namespace <namespace 이름>
+```
