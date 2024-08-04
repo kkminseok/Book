@@ -93,3 +93,42 @@ kubectl get pods --all-namespaces
 # 네임스페이스 삭제
 kubectl delete namespace <namespace 이름>
 ```
+
+### 컨피그맵
+```sh
+# 컨피그맵 생성
+kubectl create configmap <컨피그맵 이름> <각종 설정값들>
+|--from-literal|: 문자열 저장
+|--from-file|: 파일 저장
+|--from-env-file|: 여러개의 키-값 형태의 내용으로 구성된 설정파일 한 번에 가져올 수 있음.
+
+# 컨피그맵 출력
+kubectl get cm
+```
+
+### 시크릿
+
+```sh
+# 시크릿 생성
+kubectl create secret gerneric <시크릿 명> [o] key=value
+[o] => |--from-literal|: 컨피그맵 속성과 동일
+    => |--from-file|: 컨피그맵 속성과 동일
+    => |--from-env-file|: 컨피그맵 속성과 
+# generic은 시크릿의 종류
+
+# 시크릿 목록 출력
+kubectl get secrets
+
+# 도커 레지스트리에 접근
+kubectl create secret docker-registry <시크릿 이름> \
+--docker-username=<도커 유저명> \
+--docker-password=<도커 패스워드> \
+--docker-server=<사설 레지스트리 주소, 필수값은 아님>
+
+# TLS용 시크릿 생성
+kubectl create secret tls <시크릿 이름> \
+--cert <crt> --key <key>
+
+# kustomization.yaml로부터 시크릿 생성
+kubectl apply -k ./
+```
