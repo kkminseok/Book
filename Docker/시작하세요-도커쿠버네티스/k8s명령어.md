@@ -131,4 +131,7 @@ kubectl create secret tls <시크릿 이름> \
 
 # kustomization.yaml로부터 시크릿 생성
 kubectl apply -k ./
+
+# kustomization.yaml로부터 생성한 시크릿 삭제
+kubectl delete -k ./
 ```
