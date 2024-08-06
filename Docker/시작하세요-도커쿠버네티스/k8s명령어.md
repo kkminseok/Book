@@ -135,3 +135,10 @@ kubectl apply -k ./
 # kustomization.yaml로부터 생성한 시크릿 삭제
 kubectl delete -k ./
 ```
+
+### 인그레스
+
+```sh
+# 인그레스 목록
+kubectl get ingress
+```
