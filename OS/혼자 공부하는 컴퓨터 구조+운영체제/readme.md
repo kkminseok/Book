@@ -130,3 +130,11 @@
 - fork, exec
 - IPC
 - 공유 메모리
+
+### Chapter11 CPU스케줄링
+- I/O Bound Process, CPU Bound Process
+- 스케줄링큐
+- 준비큐, 대기큐
+- 선점형, 비선점형 스케줄링
+- FCFS, SJF, RoundRobin(time slice), SRT, Priority, Multilevel, Multilevel feedback
+- starvation, aging
