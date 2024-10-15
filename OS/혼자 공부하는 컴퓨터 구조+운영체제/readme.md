@@ -138,3 +138,23 @@
 - 선점형, 비선점형 스케줄링
 - FCFS, SJF, RoundRobin(time slice), SRT, Priority, Multilevel, Multilevel feedback
 - starvation, aging
+
+
+### Chapter12 동기화
+- 동기화
+- 상호배제, 진행, 유한대기
+- 생산자 소비자 문제
+- 공유자원, 임계구역
+- race condition
+- 상호배제 원칙 3가지
+- 뮤텍스 락
+- 세마포어(전역변수 S, wait, signal)
+- 모니터
+
+
+## 서평
+
+- 초보자가 읽기 좋다
+- 그만큼 간편하다. 전공자가 읽기에는 조금 부족한 내용이 많다. 특히 아쉬운 부분은 동기화 부분이였다.
+- 그럼에도 한 번 훑기 좋았다. 읽기 좋은 방법은 여기에 나온 키워드 중심으로 다시 찾아보는것이 좋은 것 같다.
+
