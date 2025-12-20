@@ -37,7 +37,7 @@
 
 ## Messaging
 
-- [✔ 스프링 부트와 RabbitMQ로 배우는 실전 메시징 시스템 - 1회](./Message/스프링부트와RabbitMQ로 배우는 실전 메시징 시스템)
+- [✔ 스프링 부트와 RabbitMQ로 배우는 실전 메시징 시스템 - 1회](./Message/스프링부트와RabbitMQ로%20배우는%20실전%20메시징%20시스템)
 
 ## SystemDesign
 
