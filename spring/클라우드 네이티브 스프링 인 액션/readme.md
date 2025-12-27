@@ -8,3 +8,8 @@
 
 - https://github.com/kkminseok/spring-cloud-native-example
 - https://github.com/kkminseok/Cloud-Native-Spring-In-Action-Infra
+
+
+## 후기
+
+솔직히 도움이 많이 된 책이다. 클라우드 네이티브 개념에 대해서도 좀 깨닫게 되고, 기술적으로 찍먹하게 되면서 어떤 고민으로 이런 기술들이 나왔나 확 와닿게 되었다. 물론 기술만 익힌다고해서 좋은것은 아닌지라 앞으로 어떤 공부를 해야겠다? 이런 생각을 가지게끔 해준 책인것같다.
